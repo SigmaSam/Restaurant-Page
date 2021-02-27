@@ -45,8 +45,15 @@ function addFooter(id, text) {
     const footer = document.createElement('footer');
     footer.setAttribute('id', id);
     const h3 = document.createElement('h3');
+    const link = document.createElement('h3')
+    link.innerHTML = "<a href='https://github.com/SigmaSam' target='_blank'>Samuel Almao</a>"
+
+    footer.className = 'bg-yellow-500 w-screen text-center font-mono'
     h3.textContent = text;
     footer.appendChild(h3);
+
+    footer.appendChild(link);
+
     return footer;
 }
 
@@ -62,7 +69,14 @@ function render() {
 
     const tabContent = addMain('tab-content');
     content.appendChild(tabContent);
-    const footer = addFooter('footer', 'Made with a lot of coofee and selfdoubt');
+
+    const footer = addFooter('footer', 'Made with Coffe, Mate and a touch of JavaScript by');
+
+
+    
+
+
+    content.appendChild(footer);
 }
 
 export default render;

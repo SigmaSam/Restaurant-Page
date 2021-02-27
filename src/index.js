@@ -15,9 +15,9 @@ function addNavEvents() {
 
   function skeleton() {
     page();
-    home();
     menu();
     contact();
+    home();    
     addNavEvents();
 }
 

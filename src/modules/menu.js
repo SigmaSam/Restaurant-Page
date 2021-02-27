@@ -13,13 +13,14 @@ function addDish(src,text,price,alt){
     const img = document.createElement('img');
     img.setAttribute('src',src);
     img.setAttribute('alt',alt);
-    img.className = 'rounded ring ring-black';
+    img.className = 'rounded ring ring-black max-h-40 min-w-60';
 
     const filler = document.createElement('div');
-    filler.className = 'description text-center';
+    filler.className = 'description text-center font-mono';
 
     const name = document.createElement('h3');
     name.textContent = text;
+    name.className = 'font-bold capitalize'
 
     const cost = document.createElement('h2');
     cost.textContent = price;
@@ -35,37 +36,42 @@ function addDish(src,text,price,alt){
 
 function menu() {
     const content = document.getElementById('tab-content');
-
     content.textContent = '';
+
+    const gridBox = document.createElement('div');
+    gridBox.className = ' mt-2 w-screen grid grid-cols-3 justify-items-center'
+
+    content.appendChild(gridBox);
+
     setSwap('menu');
 
     const dishes = [
         addDish(
-            'https://picsum.photos/200/300',
+            'https://picsum.photos/200/200',
             'lorem Ipsum',
             '999',
             'Lorem Ipsum Coffee'
         ),
         addDish(
-            'https://picsum.photos/200/300',
+            'https://picsum.photos/200/200',
             'lorem Ipsum',
             '999',
             'Lorem Ipsum Coffee'
         ),
         addDish(
-            'https://picsum.photos/200/300',
+            'https://picsum.photos/200/200',
             'lorem Ipsum',
             '999',
             'Lorem Ipsum Coffee'
         ),
         addDish(
-            'https://picsum.photos/200/300',
+            'https://picsum.photos/200/200',
             'lorem Ipsum',
             '999',
             'Lorem Ipsum Coffee'
         ),
         addDish(
-            'https://picsum.photos/200/300',
+            'https://picsum.photos/200/200',
             'lorem Ipsum',
             '999',
             'Lorem Ipsum Coffee'
@@ -73,7 +79,7 @@ function menu() {
     ];
 
     dishes.forEach((dish) => {
-        content.appendChild(dish);
+        gridBox.appendChild(dish);
     });
 }
 
