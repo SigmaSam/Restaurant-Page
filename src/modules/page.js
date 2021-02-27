@@ -1,9 +1,10 @@
 function addHeader(id) {
     const header = document.createElement('header');
     header.setAttribute('id',id);
+    header.className = 'min-w-full bg-red-700'
     const logo = document.createElement('h1');
     logo.textContent = 'Restaurant';
-    logo.className = 'text-7xl my-2 font-serif italic font-extrabold'
+    logo.className = 'text-center text-7xl my-2 font-serif italic font-extrabold '
     header.appendChild(logo);
     
     return header;
@@ -21,7 +22,7 @@ function addBtn(id, text) {
 function addNav(id) {
     const nav = document.createElement('nav');
     nav.setAttribute('id', id);
-    nav.className = 'flex justify-between w-100'
+    nav.className = 'flex justify-around'
 
     const homeBtn = addBtn('home', 'home');
     const menuBtn = addBtn('menu', 'menu');
@@ -36,6 +37,7 @@ function addNav(id) {
 function addMain(id) {
     const main = document.createElement('main');
     main.setAttribute('id', id);
+    main.className = 'bg-gray-200 h-full'
     return main;
 }
 
@@ -50,13 +52,13 @@ function addFooter(id, text) {
 
 function render() {
     const content = document.getElementById('content');
-    content.className = 'min-w-full bg-red-700 flex flex-col items-center'
+    content.className = 'min-w-full h-screen flex flex-col items-center'
     
     const header = addHeader('header');
     content.appendChild(header);
 
     const nav = addNav('nav');
-    content.appendChild(nav);
+    header.appendChild(nav);
 
     const tabContent = addMain('tab-content');
     content.appendChild(tabContent);
