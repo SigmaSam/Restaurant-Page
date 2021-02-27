@@ -1,4 +1,4 @@
-function setSwap(id) {
+const setSwap = (id) => {
   const actBtn = document.querySelector('.tab.active');
   if (actBtn) actBtn.classList.remove('active');
 
@@ -6,7 +6,7 @@ function setSwap(id) {
   homeBtn.classList.add('active');
 }
 
-function addAbout() {
+const  addAbout = () => {
   const about = document.createElement('section');
   about.className = ('section w-screen flex flex-col items-center text-center border-t-2 border-black');
 
@@ -24,7 +24,7 @@ function addAbout() {
   return about;
 }
 
-function about() {
+const about = () => {
   const content = document.getElementById('tab-content');
 
   content.textContent = '';

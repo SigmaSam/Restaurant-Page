@@ -1,4 +1,4 @@
-function setSwap(id) {
+const setSwap = (id) => {
   const actBtn = document.querySelector('.tab.active');
   if (actBtn) actBtn.classList.remove('active');
 
@@ -6,7 +6,7 @@ function setSwap(id) {
   homeBtn.classList.add('active');
 }
 
-function addDish(src, text, price, alt) {
+const addDish = (src, text, price, alt) => {
   const dish = document.createElement('div');
   dish.className = 'food p-2 m2';
 
@@ -34,7 +34,7 @@ function addDish(src, text, price, alt) {
   return dish;
 }
 
-function menu() {
+const menu = () => {
   const content = document.getElementById('tab-content');
   content.textContent = '';
 

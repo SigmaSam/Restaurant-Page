@@ -1,4 +1,4 @@
-function setSwap(id) {
+const setSwap = (id) => {
   const actBtn = document.querySelector('.tab.active');
   if (actBtn) actBtn.classList.remove('active');
 
@@ -6,7 +6,7 @@ function setSwap(id) {
   homeBtn.classList.add('active');
 }
 
-function addSection(name, data) {
+const addSection = (name, data) => {
   const section = document.createElement('section');
   section.className = 'section font-mono mt-5 capitalize mx-5';
 
@@ -25,7 +25,7 @@ function addSection(name, data) {
   return section;
 }
 
-function contact() {
+const contact = () => {
   const content = document.getElementById('tab-content');
 
   content.textContent = '';

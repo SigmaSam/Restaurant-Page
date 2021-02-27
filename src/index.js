@@ -3,7 +3,7 @@ import home from './modules/home';
 import menu from './modules/menu';
 import contact from './modules/contact';
 
-function addNavEvents() {
+const addNavEvents =() => {
   const homeBtn = document.getElementById('home');
   const menuBtn = document.getElementById('menu');
   const contactBtn = document.getElementById('contact');
@@ -13,7 +13,7 @@ function addNavEvents() {
   contactBtn.addEventListener('click', contact);
 }
 
-function skeleton() {
+const skeleton = ()=> {
   page();
   menu();
   contact();

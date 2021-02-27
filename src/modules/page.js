@@ -1,4 +1,4 @@
-function addHeader(id) {
+const addHeader = (id) => {
   const header = document.createElement('header');
   header.setAttribute('id', id);
   header.className = 'min-w-full bg-red-700';
@@ -10,7 +10,7 @@ function addHeader(id) {
   return header;
 }
 
-function addBtn(id, text) {
+const addBtn = (id, text) => {
   const btn = document.createElement('button');
   btn.setAttribute('id', id);
   btn.innerHTML = text;
@@ -19,7 +19,7 @@ function addBtn(id, text) {
   return btn;
 }
 
-function addNav(id) {
+const addNav = (id) => {
   const nav = document.createElement('nav');
   nav.setAttribute('id', id);
   nav.className = 'flex justify-around';
@@ -34,14 +34,14 @@ function addNav(id) {
   return nav;
 }
 
-function addMain(id) {
+const addMain = (id) => {
   const main = document.createElement('main');
   main.setAttribute('id', id);
   main.className = 'bg-gray-200 h-full';
   return main;
 }
 
-function addFooter(id, text) {
+const  addFooter = (id, text) => {
   const footer = document.createElement('footer');
   footer.setAttribute('id', id);
   const h3 = document.createElement('h3');
@@ -57,7 +57,7 @@ function addFooter(id, text) {
   return footer;
 }
 
-function render() {
+const render = () => {
   const content = document.getElementById('content');
   content.className = 'min-w-full h-screen flex flex-col items-center';
 
