@@ -1,86 +1,86 @@
 function setSwap(id) {
-    const actBtn = document.querySelector('.tab.active');
-    if (actBtn) actBtn.classList.remove('active');
+  const actBtn = document.querySelector('.tab.active');
+  if (actBtn) actBtn.classList.remove('active');
 
-    const homeBtn = document.getElementById(id);
-    homeBtn.classList.add('active');
+  const homeBtn = document.getElementById(id);
+  homeBtn.classList.add('active');
 }
 
-function addDish(src,text,price,alt){
-    const dish = document.createElement('div');
-    dish.className = 'food p-2 m2';
-    
-    const img = document.createElement('img');
-    img.setAttribute('src',src);
-    img.setAttribute('alt',alt);
-    img.className = 'rounded ring ring-black max-h-40 min-w-60';
+function addDish(src, text, price, alt) {
+  const dish = document.createElement('div');
+  dish.className = 'food p-2 m2';
 
-    const filler = document.createElement('div');
-    filler.className = 'description text-center font-mono';
+  const img = document.createElement('img');
+  img.setAttribute('src', src);
+  img.setAttribute('alt', alt);
+  img.className = 'rounded ring ring-black max-h-40 min-w-60';
 
-    const name = document.createElement('h3');
-    name.textContent = text;
-    name.className = 'font-bold capitalize'
+  const filler = document.createElement('div');
+  filler.className = 'description text-center font-mono';
 
-    const cost = document.createElement('h2');
-    cost.textContent = price;
+  const name = document.createElement('h3');
+  name.textContent = text;
+  name.className = 'font-bold capitalize';
 
-    filler.appendChild(name);
-    filler.appendChild(cost);
+  const cost = document.createElement('h2');
+  cost.textContent = price;
 
-    dish.appendChild(img);
-    dish.appendChild(filler);
+  filler.appendChild(name);
+  filler.appendChild(cost);
 
-    return dish;
+  dish.appendChild(img);
+  dish.appendChild(filler);
+
+  return dish;
 }
 
 function menu() {
-    const content = document.getElementById('tab-content');
-    content.textContent = '';
+  const content = document.getElementById('tab-content');
+  content.textContent = '';
 
-    const gridBox = document.createElement('div');
-    gridBox.className = ' mt-2 w-screen grid grid-cols-3 justify-items-center'
+  const gridBox = document.createElement('div');
+  gridBox.className = ' mt-2 w-screen grid grid-cols-3 justify-items-center';
 
-    content.appendChild(gridBox);
+  content.appendChild(gridBox);
 
-    setSwap('menu');
+  setSwap('menu');
 
-    const dishes = [
-        addDish(
-            'https://picsum.photos/200/200',
-            'lorem Ipsum',
-            '999',
-            'Lorem Ipsum Coffee'
-        ),
-        addDish(
-            'https://picsum.photos/200/200',
-            'lorem Ipsum',
-            '999',
-            'Lorem Ipsum Coffee'
-        ),
-        addDish(
-            'https://picsum.photos/200/200',
-            'lorem Ipsum',
-            '999',
-            'Lorem Ipsum Coffee'
-        ),
-        addDish(
-            'https://picsum.photos/200/200',
-            'lorem Ipsum',
-            '999',
-            'Lorem Ipsum Coffee'
-        ),
-        addDish(
-            'https://picsum.photos/200/200',
-            'lorem Ipsum',
-            '999',
-            'Lorem Ipsum Coffee'
-        ),
-    ];
+  const dishes = [
+    addDish(
+      'https://picsum.photos/200/200',
+      'lorem Ipsum',
+      '999',
+      'Lorem Ipsum Coffee',
+    ),
+    addDish(
+      'https://picsum.photos/200/200',
+      'lorem Ipsum',
+      '999',
+      'Lorem Ipsum Coffee',
+    ),
+    addDish(
+      'https://picsum.photos/200/200',
+      'lorem Ipsum',
+      '999',
+      'Lorem Ipsum Coffee',
+    ),
+    addDish(
+      'https://picsum.photos/200/200',
+      'lorem Ipsum',
+      '999',
+      'Lorem Ipsum Coffee',
+    ),
+    addDish(
+      'https://picsum.photos/200/200',
+      'lorem Ipsum',
+      '999',
+      'Lorem Ipsum Coffee',
+    ),
+  ];
 
-    dishes.forEach((dish) => {
-        gridBox.appendChild(dish);
-    });
+  dishes.forEach((dish) => {
+    gridBox.appendChild(dish);
+  });
 }
 
 export default menu;

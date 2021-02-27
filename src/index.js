@@ -1,24 +1,24 @@
-import page from './modules/page.js';
-import home from './modules/home.js';
-import menu from './modules/menu.js';
-import contact from './modules/contact.js';
+import page from './modules/page';
+import home from './modules/home';
+import menu from './modules/menu';
+import contact from './modules/contact';
 
 function addNavEvents() {
-    const homeBtn = document.getElementById('home');
-    const menuBtn = document.getElementById('menu');
-    const contactBtn = document.getElementById('contact');
-  
-    homeBtn.addEventListener('click', home);
-    menuBtn.addEventListener('click', menu);
-    contactBtn.addEventListener('click', contact);
+  const homeBtn = document.getElementById('home');
+  const menuBtn = document.getElementById('menu');
+  const contactBtn = document.getElementById('contact');
+
+  homeBtn.addEventListener('click', home);
+  menuBtn.addEventListener('click', menu);
+  contactBtn.addEventListener('click', contact);
 }
 
-  function skeleton() {
-    page();
-    menu();
-    contact();
-    home();    
-    addNavEvents();
+function skeleton() {
+  page();
+  menu();
+  contact();
+  home();
+  addNavEvents();
 }
 
 skeleton();
