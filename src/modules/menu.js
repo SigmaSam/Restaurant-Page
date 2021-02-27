@@ -1,11 +1,3 @@
-const setSwap = (id) => {
-  const actBtn = document.querySelector('.tab.active');
-  if (actBtn) actBtn.classList.remove('active');
-
-  const homeBtn = document.getElementById(id);
-  homeBtn.classList.add('active');
-}
-
 const addDish = (src, text, price, alt) => {
   const dish = document.createElement('div');
   dish.className = 'food p-2 m2';
@@ -42,8 +34,6 @@ const menu = () => {
   gridBox.className = ' mt-2 w-screen grid grid-cols-3 justify-items-center';
 
   content.appendChild(gridBox);
-
-  setSwap('menu');
 
   const dishes = [
     addDish(

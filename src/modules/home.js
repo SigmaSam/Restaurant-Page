@@ -1,11 +1,3 @@
-const setSwap = (id) => {
-  const actBtn = document.querySelector('.tab.active');
-  if (actBtn) actBtn.classList.remove('active');
-
-  const homeBtn = document.getElementById(id);
-  homeBtn.classList.add('active');
-}
-
 const  addAbout = () => {
   const about = document.createElement('section');
   about.className = ('section w-screen flex flex-col items-center text-center border-t-2 border-black');
@@ -26,13 +18,9 @@ const  addAbout = () => {
 
 const about = () => {
   const content = document.getElementById('tab-content');
-
   content.textContent = '';
 
   const aboutSection = addAbout();
-
-  setSwap('home');
-
   content.appendChild(aboutSection);
 }
 

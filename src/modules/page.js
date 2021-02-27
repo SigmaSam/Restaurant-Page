@@ -1,3 +1,11 @@
+const setSwap = (id) => {
+  const actBtn = document.querySelector('.tab.active');
+  if (actBtn) actBtn.classList.remove('active');
+
+  const homeBtn = document.getElementById(id);
+  homeBtn.classList.add('active');
+}
+
 const addHeader = (id) => {
   const header = document.createElement('header');
   header.setAttribute('id', id);
@@ -76,4 +84,4 @@ const render = () => {
   content.appendChild(footer);
 }
 
-export default render;
+export default render; setSwap;

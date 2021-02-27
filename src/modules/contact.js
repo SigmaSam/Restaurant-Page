@@ -1,11 +1,3 @@
-const setSwap = (id) => {
-  const actBtn = document.querySelector('.tab.active');
-  if (actBtn) actBtn.classList.remove('active');
-
-  const homeBtn = document.getElementById(id);
-  homeBtn.classList.add('active');
-}
-
 const addSection = (name, data) => {
   const section = document.createElement('section');
   section.className = 'section font-mono mt-5 capitalize mx-5';
@@ -27,15 +19,11 @@ const addSection = (name, data) => {
 
 const contact = () => {
   const content = document.getElementById('tab-content');
-
   content.textContent = '';
 
   const section = document.createElement('section');
   section.className = 'w-screen text-center flex justify-center';
   content.appendChild(section);
-
-
-  setSwap('contact');
 
   const phone = addSection('Phones', ['1234-567-8910',
     '1234-567-8910']);
