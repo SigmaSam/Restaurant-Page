@@ -24,7 +24,7 @@ const addDish = (src, text, price, alt) => {
   dish.appendChild(filler);
 
   return dish;
-}
+};
 
 const menu = () => {
   const content = document.getElementById('tab-content');
@@ -71,6 +71,6 @@ const menu = () => {
   dishes.forEach((dish) => {
     gridBox.appendChild(dish);
   });
-}
+};
 
 export default menu;

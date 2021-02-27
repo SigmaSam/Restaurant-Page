@@ -1,3 +1,4 @@
+
 const addSection = (name, data) => {
   const section = document.createElement('section');
   section.className = 'section font-mono mt-5 capitalize mx-5';
@@ -15,7 +16,7 @@ const addSection = (name, data) => {
   });
 
   return section;
-}
+};
 
 const contact = () => {
   const content = document.getElementById('tab-content');
@@ -32,6 +33,6 @@ const contact = () => {
 
   section.appendChild(phone);
   section.appendChild(address);
-}
+};
 
 export default contact;

@@ -1,11 +1,3 @@
-const setSwap = (id) => {
-  const actBtn = document.querySelector('.tab.active');
-  if (actBtn) actBtn.classList.remove('active');
-
-  const homeBtn = document.getElementById(id);
-  homeBtn.classList.add('active');
-}
-
 const addHeader = (id) => {
   const header = document.createElement('header');
   header.setAttribute('id', id);
@@ -16,7 +8,7 @@ const addHeader = (id) => {
   header.appendChild(logo);
 
   return header;
-}
+};
 
 const addBtn = (id, text) => {
   const btn = document.createElement('button');
@@ -25,7 +17,7 @@ const addBtn = (id, text) => {
   btn.className = 'bg-yellow-400 px-4 py-2 mx-5 rounded border-2 border-black ring ring-white my-2 font-bold capitalize italic';
 
   return btn;
-}
+};
 
 const addNav = (id) => {
   const nav = document.createElement('nav');
@@ -40,16 +32,16 @@ const addNav = (id) => {
   nav.appendChild(menuBtn);
   nav.appendChild(contactBtn);
   return nav;
-}
+};
 
 const addMain = (id) => {
   const main = document.createElement('main');
   main.setAttribute('id', id);
   main.className = 'bg-gray-200 h-full';
   return main;
-}
+};
 
-const  addFooter = (id, text) => {
+const addFooter = (id, text) => {
   const footer = document.createElement('footer');
   footer.setAttribute('id', id);
   const h3 = document.createElement('h3');
@@ -63,7 +55,7 @@ const  addFooter = (id, text) => {
   footer.appendChild(link);
 
   return footer;
-}
+};
 
 const render = () => {
   const content = document.getElementById('content');
@@ -82,6 +74,6 @@ const render = () => {
 
 
   content.appendChild(footer);
-}
+};
 
-export default render; setSwap;
+export default render;

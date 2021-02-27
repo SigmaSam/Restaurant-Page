@@ -1,4 +1,4 @@
-const  addAbout = () => {
+const addAbout = () => {
   const about = document.createElement('section');
   about.className = ('section w-screen flex flex-col items-center text-center border-t-2 border-black');
 
@@ -14,7 +14,7 @@ const  addAbout = () => {
 
   about.appendChild(filler);
   return about;
-}
+};
 
 const about = () => {
   const content = document.getElementById('tab-content');
@@ -22,6 +22,6 @@ const about = () => {
 
   const aboutSection = addAbout();
   content.appendChild(aboutSection);
-}
+};
 
 export default about;
