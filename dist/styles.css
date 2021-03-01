@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+h1 {
+    -webkit-text-stroke: 2px white;
+}
+
+@tailwind utilities;
